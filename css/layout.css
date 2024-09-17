@@ -43,6 +43,10 @@ footer a:visited {
     text-decoration: none; 
 }
 
+footer ul {
+    list-style: none;
+}
+
 @media only screen and (min-width: 800px) {
     body {
         grid-template-areas: 
@@ -61,13 +65,22 @@ footer a:visited {
         padding: 0;
     }
 
+    header .logo {
+        padding: 0 var(--s1);
+    }
+
     main {
         padding: 0 20%;
+    }
+
+    nav li {
+        display: inline-block;
+        padding-right: 1rem;
     }
 }
 
 header .logo {
-    max-width: 600px;
+    max-width: 700px;
     width: 100%;
 }
 

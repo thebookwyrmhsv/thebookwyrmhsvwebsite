@@ -1,0 +1,682 @@
+/*
+    Variables
+*/
+:root {
+    --golden-ratio: 1.61803398875;
+    --ratio: var(--golden-ratio);
+    --s-5: calc(var(--s-4) / var(--ratio));
+    --s-4: calc(var(--s-3) / var(--ratio));
+    --s-3: calc(var(--s-2) / var(--ratio));
+    --s-2: calc(var(--s-1) / var(--ratio));
+    --s-1: calc(var(--s0) / var(--ratio));
+    --s0: 1rem;
+    --s1: calc(var(--s0) * var(--ratio));
+    --s2: calc(var(--s1) * var(--ratio));
+    --s3: calc(var(--s2) * var(--ratio));
+    --s4: calc(var(--s3) * var(--ratio));
+    --s5: calc(var(--s4) * var(--ratio));
+
+    /* Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3) */
+    --font-sans-stack: 'Helvetica Neue', 'Arial Nova', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    --font-serif-stack: serif;
+    --font-regular: var(--font-serif-stack);
+    --font-heading: Helgoland, var(--font-serif-stack);
+    --line-height: var(--ratio);
+    --line-height-small: calc(0.7 * var(--ratio));
+    --measure: 60ch;
+    
+    --color-black: #0e2115;
+    --color-blue: #acc9ca;
+    --color-green: #084f13;
+    --color-white: #ebebdb;
+    --color-yellow: #fff18e;
+
+    --border-radius: 0px;
+
+    font-size: calc(1rem + 0.5vw);
+    line-height: var(--line-height);
+}
+
+
+
+
+
+
+/*
+    font-face
+*/
+@font-face {
+    font-family: Helgoland;
+    src:
+        local("Helgoland"),
+        url("https://thebookwyrmhsv.com/fonts/Helgoland.woff2") format("woff2"); 
+}
+
+
+
+
+
+
+/*
+    *
+    @viewport
+    ::selection
+*/
+* {
+    margin: 0;
+    max-width: var(--measure);
+    overflow-wrap: break-word;
+    padding: 0;
+}
+
+::-moz-selection, 
+::selection {
+    background-color: var(--color-green);
+    color: var(--color-white);
+    text-shadow: none; 
+}
+
+
+
+
+
+
+/*
+    html
+    body
+    header
+    footer
+    nav
+    main
+    article
+    aside
+    section
+    p
+    pre
+    blockquote
+    figure
+    figcaption
+    address
+    summary
+    details
+    div 
+*/
+html,
+body,
+div,
+header,
+nav,
+main,
+footer {
+    max-width: none;
+}
+
+html {
+    box-sizing: border-box; 
+}
+  
+*,
+*::before,
+*::after {
+    box-sizing: inherit; 
+}
+
+body {
+    font-family: var(--font-regular);
+    background-color: var(--color-white);
+    color: var(--color-black);
+}
+
+p {
+    margin: var(--s0) 0;
+}
+
+p:first-child {
+    margin-top: 0;
+}
+  
+blockquote {
+    margin-left: 2em;
+    quotes: '“' '”' '‘' '’'; 
+}
+
+blockquote::before {
+    content: open-quote;
+    margin-left: -0.83ch;
+}
+
+blockquote::after {
+    content: close-quote; 
+}
+  
+figure {
+    margin: calc(var(--ratio) * 3rem) 0;
+}
+
+figcaption {
+    font-family: var(--font-caption);
+    font-size: 80%;
+    text-align: right;
+}
+
+
+
+
+
+
+/*
+    hgroup
+    h1
+    h2
+    h3
+    h4
+    h5
+    h6 
+*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-variant-numeric: lining-nums;
+    hyphens: auto;
+    line-height: var(--line-height-small);
+}
+
+h1,
+h2 {
+    font-family: var(--font-heading);
+}
+
+h1 {
+    font-size: var(--s3);
+    margin-top: var(--s2);
+    margin-bottom: var(--s1);
+    letter-spacing: -0.03em; 
+}
+
+h2 {
+    font-size: var(--s1);
+    margin-top: var(--s1);
+    /* margin-bottom: var(--s1); */
+}
+
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+    margin-top: var(--s0);
+}
+
+h3,
+h4,
+h5,
+h6 {
+    font-size: var(--s1);
+}
+
+@media only screen and (min-width: 800px) {
+    h1 {
+        font-size: var(--s3);
+        margin-top: var(--s2);
+        letter-spacing: -0.03em; 
+    }
+    
+    h2 {
+        font-size: var(--s2);
+        margin-top: var(--s1);
+    }    
+}
+
+
+
+
+
+
+/*
+    ul
+    ol
+    li
+    dl
+    dt
+    dd
+    menu
+    menuitem
+*/
+ul,
+ol {
+    list-style-position: outside; 
+}
+
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+    margin: 0 0 0 1rem; 
+}
+
+nav li {
+    list-style-type: none; 
+}
+
+ul.horizontal li {
+  display: inline-block; }
+
+
+
+
+
+/*
+    canvas
+    object
+    embed
+    img
+    audio
+    video
+    track
+    map
+    area
+    iframe 
+*/
+
+    
+    
+    
+    
+
+/*
+    form
+    fieldset
+    legend
+    label
+    input
+    button
+    select
+    optgroup
+    option
+    datalist
+    textarea
+    output
+*/
+input,
+select {
+    vertical-align: middle; }
+  
+input[type='color'],
+input[type='date'],
+input[type='datetime'],
+input[type='datetime-local'],
+input[type='number'],
+input[type='range'],
+input[type='tel'],
+input[type='week'] {
+    font-feature-settings: "lnum"; }
+  
+form {
+    border-color: var(--color-black); 
+}
+  
+form[class*="-field"] {
+    display: inline-block;
+    line-height: 1.1;
+    vertical-align: middle;
+    white-space: normal; }
+  
+form[class*="decor"] {
+    line-height: 0; }
+  
+form input::-webkit-input-placeholder,
+form textarea::-webkit-input-placeholder,
+form select::-webkit-input-placeholder {
+    line-height: normal; }
+  
+form button {
+    -moz-appearance: none;
+    -webkit-appearance: none; }
+  
+fieldset {
+    border: none; }
+  
+legend {
+    border-bottom: 1px solid var(--color-black);
+    font-size: 1.5625rem;
+    line-height: 1.95rem;
+    margin-bottom: 1.3rem;
+    padding: 0 0 5px 0;
+    width: 100%; }
+  
+label {
+    font-size: var(--s-1); 
+}
+  
+label[for] {
+    cursor: pointer; }
+  
+label:after {
+    content: "\A";
+    white-space: pre; }
+  
+label + input {
+    margin-top: 2px; }
+  
+input,
+button,
+select {
+    border-radius: 1em; 
+}
+  
+input,
+select {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-black);
+    font-size: 1rem;
+    line-height: 1.3rem;
+    padding: 0.6em 0.8em;
+    width: 100%;
+    max-width: 100%;
+    /* useful when width is set to anything other than 100% */ }
+  
+input {
+    display: block; }
+  
+button {
+    background: var(--color-black);
+    border: 1px solid var(--color-black);
+    border-radius: var(--border-radius);
+    color: var(--color-white);
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1rem;
+    margin: 0;
+    padding: 0.5em 1.3em;
+    text-decoration: none;
+    text-align: center; 
+}
+  
+button:hover,
+button:focus {
+    background-color: var(--color-white);
+    color: var(--color-black); 
+}
+  
+select {
+    display: block;
+    box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.04);
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    /* note: bg image below uses 2 urls. The first is an svg data uri for the arrow icon, and the second is the gradient. for the icon, if you want to change the color, be sure to use `%23` instead of `#`, since it's a url. You can also swap in a different svg icon or an external image reference */
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+    background-repeat: no-repeat, repeat;
+    /* arrow icon position (1em from the right, 50% vertical) , then gradient position*/
+    background-position: right .7em top 50%, 0 0;
+    /* icon size, then gradient */
+    background-size: .65em auto, 100%; }
+  
+/* Hide arrow icon in IE browsers */
+select::-ms-expand {
+    display: none; }
+  
+select:hover {
+    border-color: #888; }
+  
+select:focus {
+    border-color: #aaa;
+    /* It'd be nice to use -webkit-focus-ring-color here but it doesn't work on box-shadow */
+    box-shadow: 0 0 1px 3px rgba(59, 153, 252, 0.7);
+    box-shadow: 0 0 0 3px -moz-mac-focusring;
+    color: #222;
+    outline: none; }
+  
+select option {
+    font-size: 1rem; }
+  
+textarea {
+    overflow: auto;
+    resize: vertical;
+    vertical-align: top;
+    width: 100%;
+    border-radius: var(--border-radius);
+    padding: var(--s-2);
+}
+  
+textarea:not([rows]) {
+    min-height: var(--s5);
+}
+
+
+  
+
+
+
+/*
+    table
+    caption
+    colgroup
+    col
+    thead
+    tfoot
+    tbody
+    tr
+    th
+    td
+*/
+table {
+    border-collapse: collapse;
+    font-variant-numeric: lining-nums tabular-nums;
+    -webkit-font-feature-settings: 'kern' 0, 'liga', 'lnum', 'onum' 0, 'pnum' 0, 'tnum', 'zero';
+    -moz-font-feature-settings: 'kern' 0, 'liga', 'lnum', 'onum' 0, 'pnum' 0, 'tnum', 'zero';
+    font-feature-settings: 'kern' 0, 'liga', 'lnum', 'onum' 0, 'pnum' 0, 'tnum', 'zero'; }
+  
+table .numeric-column {
+    text-align: right; 
+}
+
+caption {
+    font-family: var(--font-caption);
+}
+  
+thead,
+tfoot {
+    -webkit-font-feature-settings: 'dlig' 0, 'kern', 'liga', 'lnum' 0, 'onum', 'pnum', 'tnum' 0;
+    -moz-font-feature-settings: 'dlig' 0, 'kern', 'liga', 'lnum' 0, 'onum', 'pnum', 'tnum' 0;
+    font-feature-settings: 'dlig' 0, 'kern', 'liga', 'lnum' 0, 'onum', 'pnum', 'tnum' 0; }
+  
+td,
+th {
+    line-height: 1;
+    padding: 0.125em 0.5em 0.25em 0.5em; 
+}
+  
+th {
+    font-family: var(--font-caption);
+}
+  
+th.oblique-heading {
+    transform: translate(2.58em, -2em) rotate(-60deg);
+    transform-origin: bottom left;
+    position: absolute; }
+
+table.vertical th {
+    text-align: left;
+    width: 1em; /* force to minimum width needed for text */
+}
+  
+@media (max-width: 25em) {
+    table,
+    caption,
+    tbody,
+    tr,
+    th,
+    td {
+        display: block;
+        text-align: left; }
+
+    tr {
+        padding-bottom: 1em; }
+    thead,
+    th:empty,
+    td:empty {
+        display: none;
+        visibility: hidden; }
+    
+    th[data-title]:before,
+    td[data-title]:before {
+      content: attr(data-title) ": ";
+      display: inline-block;
+      width: 3.5em; } 
+}  
+  
+  
+
+
+
+/*
+    a
+    strong
+    em
+    b
+    i
+    u
+    s
+    sup
+    sub
+    small
+    abbr
+    dfn
+    mark
+    del
+    ins
+    q
+    cite
+    data
+    progress
+    time
+    meter
+    code
+    var
+    samp
+    kbd
+    keygen
+    bdi
+    bdo
+    ruby
+    rt
+    rp
+    span 
+*/
+a,
+strong,
+em,
+b,
+i,
+small,
+code {
+    line-height: 0; 
+}
+  
+a {
+    color: var(--color-green);
+    white-space: nowrap;
+    text-decoration-thickness: 0.1em;
+}
+
+a:visited {
+    color: var(--color-black);
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+    white-space: initial;
+}
+
+sup,
+sub {
+    font-size: 0.889em;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline; }
+  
+sup {
+    top: -0.5em; }
+  
+sub {
+    bottom: -0.25em; }
+  
+small {
+    font-size: 0.889em;
+}
+  
+abbr,
+.proper-name {
+    -ms-hyphens: manual;
+    -webkit-hyphens: manual;
+    hyphens: manual; }
+
+
+
+
+
+
+/* 
+    hr
+*/
+
+
+
+
+
+
+/*
+    @media print
+*/
+@media print {
+    *,
+    *:before,
+    *:after {
+      background: transparent !important;
+      color: black !important;
+      box-shadow: none !important;
+      text-shadow: none !important; }
+    
+    a,
+    a:visited {
+      text-decoration: underline; }
+
+    a[href]:after {
+      content: " (" attr(href) ")"; }
+
+    abbr[title]:after {
+      content: " (" attr(title) ")"; }
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+      content: ""; }
+
+    thead {
+      display: table-header-group; }
+
+    tr,
+    img {
+      page-break-inside: avoid; }
+
+    p,
+    h2,
+    h3 {
+      orphans: 3;
+      widows: 3; }
+
+    h2,
+    h3 {
+      page-break-after: avoid; }
+
+    audio,
+    canvas,
+    video {
+      display: none; } }

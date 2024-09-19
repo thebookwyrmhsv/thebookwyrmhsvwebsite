@@ -55,7 +55,7 @@
   <footer>
     <section>
       <img src="/img/bookworm-logo-book.png" alt="Eustace, the mascot of The Bookwyrm">
-      © The Bookwyrm Bookshop
+      <p>© <span id="currentYear"></span> The Bookwyrm Bookshop</p>
     </section>
     <section>
       <h2>Location</h2>
@@ -68,11 +68,21 @@
     <section>
       <h2>Social Media</h2>
       <ul>
-        <li><a href="https://www.facebook.com/TheBookwyrmHSV">Facebook</a></li>
-        <li><a href="https://bookshop.org/shop/TheBookwyrmHsv">Bookshop.org</a></li>
-        <li><a href="https://libro.fm/thebookwyrmhsv/">Libro.fm</a></li>
+        <li><img src="/img/facebook.png"> <a href="https://www.facebook.com/TheBookwyrmHSV">Facebook</a></li>
+      </ul>
+      <h2>Affiliates</h2>
+      <ul>
+        <li><img src="/img/bookshoporg.png"> <a href="https://bookshop.org/shop/TheBookwyrmHsv">Bookshop.org</a></li>
+        <li><img src="/img/librofm.png"> <a href="https://libro.fm/thebookwyrmhsv/">Libro.fm</a></li>
       </ul>
     </section>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        let yearSpan = document.getElementById('currentYear');
+        let currentYear = (new Date()).getFullYear();
+        yearSpan.innerHTML = currentYear;
+      })
+    </script>
   </footer>
 </body>
 

@@ -53,6 +53,10 @@ footer ul {
     list-style: none;
 }
 
+footer li img, footer li a {
+    vertical-align: middle;
+}
+
 @media only screen and (min-width: 800px) {
     body {
         grid-template-areas: 
@@ -83,8 +87,18 @@ footer ul {
         flex-direction: row;
     }
 
+    footer section {
+        flex: 1;
+        padding: 0 10px;
+    }
+
     footer h2 {
         margin-top: 0;
+        font-size: var(--s1);
+    }
+
+    footer ul + h2 {
+        margin-top: var(--s1);
     }
 
     nav li {

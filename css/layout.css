@@ -20,8 +20,13 @@ nav {
     font-family: var(--font-heading);
 }
 
-main {
+nav,
+.header-nav-link {
     padding: var(--s-1);
+}
+
+main {
+    padding: var(--s1) var(--s-1);
 }
 
 footer {
@@ -55,10 +60,6 @@ footer li img, footer li a {
 }
 
 @media only screen and (min-width: 800px) {
-    html {
-        font-size: calc(1rem + 0.5vw);
-    }
-    
     body {
         grid-template-columns: repeat(5, minmax(0, 1fr));
         grid-template-areas: 
@@ -66,10 +67,20 @@ footer li img, footer li a {
             "...... nav    nav    nav    ......"
             "...... main   main   main   ......"
             "footer footer footer footer footer";
+        font-size: calc(1rem + 0.5vw);
     }
 
-    header .site-header-nav-link {
+    nav,
+    .header-nav-link {
+        padding: 0;
+    }
+
+    .header-nav-link {
         display: none;
+    }
+
+    main {
+        padding: var(--s3) 0;
     }
 
     footer {
@@ -86,7 +97,8 @@ footer li img, footer li a {
         font-size: var(--s1);
     }
 
-    footer ul + h2 {
+    footer ul + h2,
+    .footer-logo {
         margin-top: var(--s1);
     }
 

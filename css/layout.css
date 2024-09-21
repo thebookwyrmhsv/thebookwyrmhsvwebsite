@@ -4,7 +4,6 @@
 body {
     display: grid;
     grid-template-columns: 1fr;
-    gap: var(--s3);
     grid-template-areas: 
         "header"
         "main"  
@@ -17,14 +16,12 @@ main { grid-area: main; }
 nav { grid-area: nav; }
 footer { grid-area: footer; }
 
-header,
-main,
-nav {
-    padding: 0 var(--s1);
-}
-
 nav {
     font-family: var(--font-heading);
+}
+
+main {
+    padding: var(--s-1);
 }
 
 footer {
@@ -58,29 +55,21 @@ footer li img, footer li a {
 }
 
 @media only screen and (min-width: 800px) {
+    html {
+        font-size: calc(1rem + 0.5vw);
+    }
+    
     body {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
         grid-template-areas: 
-            "header"
-            "nav"
-            "main"
-            "footer";
-        row-gap: var(--s1);
+            "...... header header header ......"
+            "...... nav    nav    nav    ......"
+            "...... main   main   main   ......"
+            "footer footer footer footer footer";
     }
 
     header .site-header-nav-link {
         display: none;
-    }
-
-    header {
-        padding: 0;
-    }
-
-    header .logo {
-        padding: 0 var(--s1);
-    }
-
-    main {
-        padding: 0 20%;
     }
 
     footer {
@@ -108,7 +97,6 @@ footer li img, footer li a {
 }
 
 header .logo {
-    max-width: 700px;
     width: 100%;
 }
 

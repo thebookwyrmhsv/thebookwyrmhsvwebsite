@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Policies • The Bookwyrm</title>
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="The Bookwyrm">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="The Bookwyrm" />
+  <meta property="og:description" content="The Bookwyrm, an independent bookstore in Huntsville, AL" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+  <link rel="manifest" href="/img/site.webmanifest">
+  <link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="/img/favicon.ico">
+  <meta name="msapplication-TileColor" content="#00a300">
+  <meta name="msapplication-config" content="/img/browserconfig.xml">
+  <meta name="theme-color" content="#084f13">
+
+  <link rel="stylesheet" href="/css/modern-normalize.css" />
+  <link rel="stylesheet" href="/css/base.css" />
+  <link rel="stylesheet" href="/css/layout.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <img src="/img/bookwyrm-title-transparent.png" alt="The Bookwyrm" class="logo">
+
+    <div class="header-nav-link">
+      <a href="#siteNav" class="site-nav-link">☰ Menu</a>
+    </div>
+  </header>
+
+  <nav>
+    <ol id="siteNav">
+      <li><a href="/">Home</a></li>
+      <li><a href="/about-us">About Us</a></li>
+      <li><a href="/policies">Policies</a></li>
+      <li><a href="/meeting-spaces">Meeting Spaces</a></li>
+      <li><a href="/events">Events</a></li>
+      <li><a href="/faq">FAQ</a></li>
+      <li><a href="/contact-us">Contact Us</a></li>
+    </ol>
+  </nav>
+
+  <main>
+    <h1>Policies</h1>
+    <h2>Trade-In Policies</h2>
+    
+    <h2>Homeschool Curriculum Consignment</h2>
+    <p>Contact us or come by the store and we'll get you set up!</p>
+  </main>
+
+  <footer>
+    <section>
+      <h2>Location</h2>
+      <p>7914 Memorial Pkwy SW, Huntsville, AL 35802</p>
+    </section>
+    <section>
+      <h2>Hours</h2>
+      <p></p>
+    </section>
+    <section>
+      <h2>Affiliates</h2>
+      <ul>
+        <li><img src="/img/bookshoporg.png"> <a href="https://bookshop.org/shop/TheBookwyrmHsv">Bookshop.org</a></li>
+        <li><img src="/img/librofm.png"> <a href="https://libro.fm/thebookwyrmhsv/">Libro.fm</a></li>
+      </ul>
+      <h2>Social Media</h2>
+      <ul>
+        <li><img src="/img/facebook.png"> <a href="https://www.facebook.com/TheBookwyrmHSV">Facebook</a></li>
+      </ul>
+    </section>
+    <section>
+      <img src="/img/bookwyrm-logo-book.png" height="215px" width="215px" class="footer-logo" alt="Eustace, the mascot of The Bookwyrm">
+      <p>© <span id="currentYear"></span> The Bookwyrm Bookshop</p>
+    </section>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        let yearSpan = document.getElementById('currentYear');
+        let currentYear = (new Date()).getFullYear();
+        yearSpan.innerHTML = currentYear;
+      })
+    </script>
+  </footer>
+</body>
+
+</html>

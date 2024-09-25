@@ -18,9 +18,9 @@
 
     /* Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3) */
     --font-sans-stack: 'Helvetica Neue', 'Arial Nova', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-    --font-serif-stack: serif;
+    --font-serif-stack: Alegreya, serif;
     --font-regular: var(--font-serif-stack);
-    --font-heading: Helgoland, var(--font-serif-stack);
+    --font-heading: Alegreya, Helgoland, serif;
     --line-height: var(--ratio);
     --line-height-small: calc(0.7 * var(--ratio));
     --measure: 60ch;
@@ -123,6 +123,7 @@ html {
 
 body {
     font-family: var(--font-regular);
+    font-optical-sizing: auto;
     background-color: var(--color-white);
     color: var(--color-black);
 }

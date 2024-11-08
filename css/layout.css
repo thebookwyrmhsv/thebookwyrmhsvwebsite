@@ -72,7 +72,20 @@ footer li img, footer li a {
 
     nav,
     .header-nav-link {
-        padding: 0;
+        padding: var(--s0) var(--s1);
+    }
+
+    nav {
+        background-color: var(--color-green);
+    }
+
+    nav li {
+        display: inline-block;
+        padding-right: 1.2rem;
+    }
+
+    nav a, nav a:visited {
+        color: var(--color-white);
     }
 
     .header-nav-link {
@@ -100,11 +113,6 @@ footer li img, footer li a {
     footer ul + h2,
     .footer-logo {
         margin-top: var(--s1);
-    }
-
-    nav li {
-        display: inline-block;
-        padding-right: 1rem;
     }
 }
 

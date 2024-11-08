@@ -20,7 +20,7 @@
     --font-sans-stack: 'Helvetica Neue', 'Arial Nova', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
     --font-serif-stack: Alegreya, serif;
     --font-regular: var(--font-serif-stack);
-    --font-heading: Alegreya, Helgoland, serif;
+    --font-heading: Alegreya, Belgiano, serif;
     --line-height: var(--ratio);
     --line-height-small: calc(0.7 * var(--ratio));
     --measure: 60ch;
@@ -45,6 +45,13 @@
 /*
     font-face
 */
+@font-face {
+    font-family: Belgiano;
+    src:
+        local("Belgiano"),
+        url("https://thebookwyrmhsv.com/fonts/BelgianoSerif.woff2") format("woff2"); 
+}
+
 @font-face {
     font-family: Helgoland;
     src:

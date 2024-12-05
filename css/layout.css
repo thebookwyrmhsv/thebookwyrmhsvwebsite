@@ -55,6 +55,10 @@ footer ul {
     list-style: none;
 }
 
+footer section.hours a {
+    text-decoration: underline;
+}
+
 .icon-link img, 
 .icon-link a {
     vertical-align: middle;

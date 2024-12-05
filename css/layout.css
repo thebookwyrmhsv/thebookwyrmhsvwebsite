@@ -55,7 +55,8 @@ footer ul {
     list-style: none;
 }
 
-footer li img, footer li a {
+.icon-link img, 
+.icon-link a {
     vertical-align: middle;
 }
 
